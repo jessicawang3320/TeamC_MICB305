@@ -1,4 +1,7 @@
 # MICB 305 Final Project
-For MICB 305 
+Authors:
 
-## This is my edit
+[UNDER CONSTRUCTION!!]
+
+## Background 
+## Methods 
