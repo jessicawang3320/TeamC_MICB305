@@ -1,7 +1,11 @@
 # MICB 305 Final Project
-Authors:
+Authors: Amy, Ellie, and Jessica
 
-[UNDER CONSTRUCTION!!]
+under construction
 
 ## Background 
+
+## Research Questions 
+
 ## Methods 
+
