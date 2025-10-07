@@ -24,5 +24,9 @@ output: html_document
 ## To-Do List:
 
 -   Have the metadata wrangled (annotate the columns further) -> merge table 1, 2, and 3 -> pivot_longer and mutate data 
--   Could start on some of the QIIME2 pipeline done
+-   Could start on some of the QIIME2 pipeline done 
 -   Build outline for proposal before OCT 26TH
+- Start on denoising 
+
+## Extra (Post Proposal)
+- For classifer train to V1 and V2
