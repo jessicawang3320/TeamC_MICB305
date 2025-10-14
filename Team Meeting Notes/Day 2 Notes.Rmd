@@ -1,0 +1,13 @@
+---
+title: "Day 2 Notes"
+output: html_document
+---
+
+## Agenda for today:
+
+1)  Double check and ensure that the "tidy" table is organized properly for analysis
+2)  Finalize a rough research question (start broad and branch out to specialized topics)
+3)  If green lights for data, go overall relevant codes needed to be done before proposal deadline (OCT 26TH!!)
+4)  Go over any relevant questions in preparation for troubleshooting over the weekends
+
+## Team Meeting Notes (Date: 10/14/2025):
