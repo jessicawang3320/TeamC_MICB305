@@ -9,5 +9,7 @@ output: html_document
 2)  Finalize a rough research question (start broad and branch out to specialized topics)
 3)  If green lights for data, go overall relevant codes needed to be done before proposal deadline (OCT 26TH!!)
 4)  Go over any relevant questions in preparation for troubleshooting over the weekends
+- side note: Why did a gitignore file appear in the directory? Is the gitignore file important or can I delete it?
+
 
 ## Team Meeting Notes (Date: 10/14/2025):
