@@ -1,15 +1,22 @@
 ---
-title: "Day 2 Notes"
+title: "Day 2 Notes
 output: html_document
 ---
+
+# !! This weeks meeting was moved to Friday (OCT 17th) on Zoom !!
 
 ## Agenda for today:
 
 1)  Double check and ensure that the "tidy" table is organized properly for analysis
 2)  Finalize a rough research question (start broad and branch out to specialized topics)
 3)  If green lights for data, go overall relevant codes needed to be done before proposal deadline (OCT 26TH!!)
-4)  Go over any relevant questions in preparation for troubleshooting over the weekends
-  - *side note: Why did a gitignore file appear in the directory? Is the gitignore file important or can I delete it?*
+4)  Confirm research question (main question at least) and possibly discuss the sub-topics that can be analyzed using the data available
+5)  Go over any relevant questions in preparation for troubleshooting over the weekends
 
+-   *side note: Why did a gitignore file appear in the directory? Is the gitignore file important or can I delete it?*
 
-## Team Meeting Notes (Date: 10/14/2025):
+## Team Meeting Notes (Date: 10/17/2025):
+
+## To-Do List:
+
+-   Complete pre-proposal (due OCT 19th)
