@@ -1,0 +1,32 @@
+---
+title: "Day 1 Notes"
+output: html_document
+---
+
+## Agenda for today:
+
+1)  Review the data files sent to us
+2)  Plan out how we want to go about our methods for the project
+3)  Begin coding perhaps?
+4)  Go over any relevant questions in preparation for troubleshooting over the weekends
+
+## Team Meeting Notes (Date: 10/07/2025):
+
+-   Look over article to see find relevant information relating to the given
+-   Should account for the time course
+-   Look into unvaccinated
+-   Do a functional analysis (compare between goups)
+-   Missing values = 0 (For the days column)
+-   Go through supplementary data and further annotate the serum antibodies onto the data (i.e. age, sex)
+-   Develop a research question (i.e. compare the response to vaccine, microbiota composition difference across different genders)
+-   Maybe look into the difference across bacteria taxa/microbes
+
+## To-Do List:
+
+-   Have the metadata wrangled (annotate the columns further) -> merge table 1, 2, and 3 -> pivot_longer and mutate data 
+-   Could start on some of the QIIME2 pipeline done 
+-   Build outline for proposal before OCT 26TH
+- Start on denoising 
+
+## Extra (Post Proposal)
+- For classifer train to V1 and V2

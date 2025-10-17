@@ -1,0 +1,109 @@
+---
+title: "tidy_metadata"
+output: html_document
+date: "2025-10-17"
+---
+
+# Loading relevant library packages to run statistical analysis
+
+```{r}
+library(tidyverse)
+library(readxl)
+```
+
+# Importing and cleaning data set
+
+```{r}
+raw_data  <- read_excel("fullmetadata.xlsx", sheet = 1, col_names = FALSE)
+header_row <- which(raw_data[[1]] == "Run")[1]
+```
+
+# Removing the first 4 rows that is not data
+
+```{r}
+names(raw_data) <- raw_data[header_row, ] %>% unlist() %>% as.character()
+data <- raw_data %>%
+  slice((header_row + 1):n()) %>%
+  mutate(
+    across(c(`Antibody Response`, `CMI Response`, DPI, Age),
+           ~ suppressWarnings(as.numeric(.x)))
+  )
+```
+
+# Pivot wider so that we can get IgA and IgG in separate columns
+
+```{r}
+wide_data <- data %>%
+  mutate(Ab = str_extract(Antibody, "Ig[AG]")) %>%
+  filter(!is.na(Ab)) %>%
+  select(Run, DPI, Volunteer, Gender, Age, `Vaccination Status`, Ab, `Antibody Response`) %>%
+  pivot_wider(
+    names_from = Ab,
+    values_from = `Antibody Response`
+  ) %>%
+  distinct()
+```
+
+# Splitting groups
+
+```{r}
+control <- wide_data %>% filter(str_detect(`Vaccination Status`, regex("control", ignore_case = TRUE)))
+vaccinated <- wide_data %>% filter(!str_detect(`Vaccination Status`, regex("control", ignore_case = TRUE)))
+```
+
+# Run statistical analysis to determine cut-off for responders vs. non-responders
+
+# t-test
+
+```{r}
+t_IgA <- t.test(vaccinated$IgA, control$IgA, alternative = "greater")
+t_IgG <- t.test(vaccinated$IgG, control$IgG, alternative = "greater")
+```
+
+# Wilcoxon (non-parametric)
+
+```{r}
+wilcox_IgA <- wilcox.test(vaccinated$IgA, control$IgA, alternative = "greater")
+wilcox_IgG <- wilcox.test(vaccinated$IgG, control$IgG, alternative = "greater")
+```
+
+# Analyzing data
+
+```{r}
+t_IgA
+t_IgG
+wilcox_IgA
+wilcox_IgG
+```
+
+\#*Overall, our results from both tests are significant. Since they are significant it tells us that the vaccine was able to successfully elicit a response from IgG and IgA.*
+
+# Determining cutoffs from control group using the 95th percentile
+```{r}
+cutoffs <- control %>% summarise( IgA_cutoff = quantile(IgA, 0.95, na.rm = TRUE), IgG_cutoff = quantile(IgG, 0.95, na.rm = TRUE) )
+
+cutoffs
+```
+
+# Classifying responders and non-responders
+```{r}
+classified <- wide %>% mutate( IgA_responder = if_else(IgA >= cutoffs$IgA_cutoff, "Responder", "Non-responder"),
+    IgG_responder = if_else(IgG >= cutoffs$IgG_cutoff, "Responder", "Non-responder") )
+```
+# Visualize antibody levels and cutoffs
+```{r}
+ggplot(classified, aes(x = `Vaccination Status`, y = IgA)) + geom_boxplot(fill = "skyblue") + geom_hline(yintercept = cutoffs$IgA_cutoff, color = "red", linetype = "dashed") +
+  labs(
+    title = "IgA antibody levels by vaccination status",
+    subtitle = paste("Red dashed line = 95th percentile cutoff =", round(cutoffs$IgA_cutoff, 2)) )
+
+ggplot(classified, aes(x = `Vaccination Status`, y = IgG)) + geom_boxplot(fill = "khaki") + geom_hline(yintercept = cutoffs$IgG_cutoff, color = "red", linetype = "dashed") +
+  labs(
+    title = "IgG antibody levels by vaccination status",
+    subtitle = paste("Red dashed line = 95th percentile cutoff =", round(cutoffs$IgG_cutoff, 2)) )
+```
+# Save cleaned data
+```{r}
+
+write_csv(classified, "metadata_clean.csv")
+```
