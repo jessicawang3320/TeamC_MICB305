@@ -12,9 +12,14 @@ Alterations in the Human Gut Microbiome
 Central Question: How do vaccines affect the composition, diversity, and function
 of the gut microbiome, and what mechanisms underlie these changes?
 
-Possible Subtopics: 
-- Does sex play a role in these changes? 
-- Does 
+Possible Subtopics/ Aims: 
+1. Does sex play a role in these changes?
+2. How is the composition of the gut microbiota different between the responders and nonresponders of the oral typhoid vaccine?
+3. What does functional analysis of microbiota tell about the role of microbiota plays in individuals responded with IgG and those responded with IgA? Or individuals that responded with both IgG and IgA? (IgG can induce inflammatory response while IgA is anti-inflammatory).
+4. Do different doses of vaccine change the microbiome composition at a certain time point after the vaccine was administered?
+5. How does the diversity of gut microbiota shift before immunization, at the day of immunization, and post immunization?
+6. What bacteria is more abundant in individuals with higher response to oral typhoid vaccine?
+
 
 ## Methods 
 
