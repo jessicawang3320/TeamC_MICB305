@@ -14,7 +14,7 @@ library(readxl)
 # Importing and cleaning data set
 
 ```{r}
-raw_data  <- read_excel("fullmetadata.xlsx", sheet = 1, col_names = FALSE)
+raw_data <- read_excel("datasets/combined_data/fullmetadata.xlsx")
 header_row <- which(raw_data[[1]] == "Run")[1]
 ```
 

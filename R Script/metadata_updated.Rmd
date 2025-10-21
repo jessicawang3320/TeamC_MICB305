@@ -1,0 +1,23 @@
+---
+title: "Tidying Data Part 2"
+author: "Jessica Wang"
+date: "2025-10-21"
+output: html_document
+---
+# Load libraries
+```{r}
+library(dplyr)
+```
+
+# Generating unique placeholder names for NA values in the "run" column 
+```{r setup, include=FALSE}
+metadata <- read.csv("datasets/clean_data/metadata_clean.csv")
+
+metadata <- metadata %>%
+  mutate(Run = ifelse(
+    is.na(Run),
+    paste0("sample_", seq_len(sum(is.na(Run)))),
+    Run
+  ))
+
+```
