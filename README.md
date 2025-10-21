@@ -20,6 +20,9 @@ Possible Subtopics/ Aims:
 5. How does the diversity of gut microbiota shift before immunization, at the day of immunization, and post immunization?
 6. What bacteria is more abundant in individuals with higher response to oral typhoid vaccine?
 
+Possible Extension Questions/Future areas for research:
+1. Does the mode of delivery of the vaccine play a role? 
+
 
 ## Methods 
 

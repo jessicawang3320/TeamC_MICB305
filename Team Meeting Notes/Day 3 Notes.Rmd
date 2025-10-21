@@ -12,6 +12,21 @@ date: "2025-10-21"
 4) Ensure that proposal is to be handed in through a document and not git/markdown file
 
 ## Team Meeting Notes (Date: 10/20/2025):
+- Eliminating age and sex as a contributing factor
+- Figure out a way to include DPI into our dataset such that it could be used for downstream analysis
+- Stick to responder and non-responder as a factor for leading question and combined DPI for analysis
+- Keep 4 dose to maintain sample size
+- Aims help guide us in answering our research question
+- include all the samples (current data set is all good to go)
+- for figures include the legend below the figure 
+- for tables include the title above the table
+- clearly identify the gaps in the research (i.e. this paper did not compare between responder and non-responder while other studies did)
+- discuss clinical significance 
 
 ## To-Do List:
+- Finalize the research question and aims
+- Does microbial diversity indicate whether a patient responds to a vaccine (aims: establish difference between groups then move forward with indicator taxa, functional analysis)
+- Add a new column for general responder status (put responder for all rows that belongs to a volunteer that is responding)
+- split groups in non-vaccinated/IgA responsive/IgG responsive
+- combined the IgG and IgA columns into a new column with the following variables: NN, YY, NY, YN 
 
