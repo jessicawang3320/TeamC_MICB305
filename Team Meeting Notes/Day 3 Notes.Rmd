@@ -1,0 +1,16 @@
+---
+title: "Day 3 Notes"
+output: html_document
+date: "2025-10-21"
+---
+
+## Agenda for today:
+
+1) Go over research question to see if is strong enough for the proposal and going forward
+2) Go over current sources for the proposal and see it is appropriate for the proposal
+3) Check the current aims of the project and see if there are any changes needed 
+
+## Team Meeting Notes (Date: 10/20/2025):
+
+## To-Do List:
+
