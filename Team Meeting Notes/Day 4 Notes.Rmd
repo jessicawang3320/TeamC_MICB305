@@ -12,7 +12,13 @@ output: html_document
 4) Go over research outline 
 
 ## Team Meeting Notes (Date: 10/28/2025):
-
+- Refine aims (make it more specific)
+- Metadata is ready to go 
+- Could go into how oral vaccine is not traditional
+- Times New Roman, 12 pt 
+- Make sure that the tables and figures are well formatted!
+- Ensure that content of the proposal meets the critera (marking is heavily based on content, not so much aesthetics)
 
 ## To-Do List:
+- Complete the project proposal (DUE: NOV 2ND - THIS SUNDAY)
 

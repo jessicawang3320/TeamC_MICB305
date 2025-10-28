@@ -22,6 +22,7 @@ date: "2025-10-21"
 - for tables include the title above the table
 - clearly identify the gaps in the research (i.e. this paper did not compare between responder and non-responder while other studies did)
 - discuss clinical significance 
+- assignTaxonomy(..., tryRC=TRUE)
 
 ## To-Do List:
 - Finalize the research question and aims
