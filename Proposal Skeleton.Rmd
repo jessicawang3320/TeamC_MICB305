@@ -1,0 +1,56 @@
+---
+title: "Proposal Skeleton"
+author: "Jessica Wang"
+date: "2025-10-28"
+output: html_document
+---
+# Title: Examining Gut Microbial Diversity as a Determinant of Host Responsiveness to Vaccination
+
+# Team C: [Insert Names]
+
+# Introduction & Background
+ - Why is this topic important? (i.e. clinical relevance, how is our world impacted by this, what consequences the virus may convey)
+- What are the key players in the context of our research? (i.e. factors or key players that contribute or are involved into MOA of typhoid) 
+- What research has been done so far? (i.e. has there been research done in regards to the relationship between microbial diversity and host responsiveness to vaccines, if no prior research then state novelty of the research question) 
+- What are the blanks that still need to be filled in or what gaps are there in current knowledge? 
+State how our research question will address the knowledge gaps and how this analysis will be carried out briefly 
+
+# Hypothesis or Prediction
+- State research question
+- Explain what this study will explore 
+- State hypothesis 
+- State all findings that supporting the hypothesis
+- Why is understanding of this topic necessary? 
+
+# Experimental Aims and Rational
+- Aim 1 (Establish how the researchers went about their data collection, Explain where there was a gap in the researchers technique, Explain how this gap will be addressed by our research)
+- Aim 2
+- Aim 3
+
+# Proposed Approach 
+- [Insert table visual of how we will go about data processing] 
+- [Insert aim specific approach - i.e. how we will go about attaining each aim]
+
+# Weekly Timeframe 
+- [Insert visualization of weekly timeframe]
+
+# Dataset Overview 
+- [Insert any relevant visuals or tables resulting for data analysis or processing]
+- Explain the result extracted from analysis and explain its relevance (i.e. what do the results mean, what can we conclude from these results?) 
+
+# Participation Report 
+- Introduction and Background:
+- Hypothesis/Prediction: 
+- Experimental Aims & Rationale: 
+- Approach:
+- Grant Chart:
+- Dataset Overview:
+- QIIME-2:
+
+# References: 
+- Everyone contributed equally to all the sections, ensuring a collaborative effort that shaped the project proposal’s main idea and objectives collectively.
+
+# References
+
+
+
