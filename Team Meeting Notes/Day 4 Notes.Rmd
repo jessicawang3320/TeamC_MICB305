@@ -1,0 +1,18 @@
+---
+title: "Day 4 Notes"
+author: "Jessica Wang"
+date: "2025-10-28"
+output: html_document
+---
+## Agenda for today:
+
+1) Go over the metadata to see if its appropriate for downstream analysis
+2) Troubleshoot problems with uploading metadata file to class server 
+3) Questions for clarification (Will we be marked on aesthetics for the proposal, is there a specific font size we need to adhere to?, when we are writing our proposal should we mention the novelty of our research topic?) 
+4) Go over research outline 
+
+## Team Meeting Notes (Date: 10/28/2025):
+
+
+## To-Do List:
+
