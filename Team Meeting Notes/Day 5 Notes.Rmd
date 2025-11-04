@@ -10,12 +10,29 @@ output: html_document
 2) Ask any revelant to the next steps (i.e. for the draft manuscript)
 
 ## Team Meeting Notes (Date: 10/28/2025):
-- Refine aims (make it more specific)
-- Metadata is ready to go 
-- Could go into how oral vaccine is not traditional
-- Times New Roman, 12 pt 
-- Make sure that the tables and figures are well formatted!
-- Ensure that content of the proposal meets the critera (marking is heavily based on content, not so much aesthetics)
+- Oral presentation is random (THURS, DEC 4th, presentation order sent out the day before)
+- Oral presentation is ~10 mins (can't go over 10 and could be under 10 mins too)
+- Try to run analysis ASAP (so we can view data during team meetings)
+- The sooner we run our analysis the sooner we can determine if we need to troubleshoot significance
+- Team meeting will be by request during reading week (2 more meetings left if we don't book team meeting)
+- IF we don't end up with significance then we can proceed with what we have but we CANNOT over claim
+- We are presenting another teams data and another team will be presenting data another teams data 
+- Presentation (oral) marks are given base on our understanding of course content and how we apply it in context of another teams dataset 
+- Make sure we keep a copy of all relevant codes we ran for our analysis (MUST be R-script and the requirement is that it should be able to run)
+- It's okay to have similarities between the proposal and manuscript
+- Last paragraph of introduction should have a summary of what we did and what we found
+- Difference between draft manuscript and final manuscript is that the final manuscript is marked based on who well we respond to the feedback 
+- Make use of the IgG and IgA responder/non-responder data
+- Presentation should be clear, concise (NOT TEXT HEAVY, 6 bullet points at most), make sure the title is related to the conclusion 
+- LAST MEETING IS DEC 2ND (any other meetings are by request)
 
 ## To-Do List:
-- Complete the post proposal survery (DUE NOV 9TH)
+- Complete the post proposal survey (DUE NOV 9TH)
+- Have analysis ready by NOV 18TH
+- Sam will be away on NOV 25th 
+- Have some conclusions ready before the last meeting to get final stamp of approval
+- Start to draft up slides (must be clear and concise)
+- Choose a DPI and run with it regardless if it has responder or non-responder
+- Draft manuscript is DUE DEC 14TH 
+- FINAL MANUSCRIPT DUE DEC 21ST (Feedback of the draft will be given fairly soon)
+- Draft up the future directions section of the presentation and ask Avril for feedback (BY NOV 25TH)
