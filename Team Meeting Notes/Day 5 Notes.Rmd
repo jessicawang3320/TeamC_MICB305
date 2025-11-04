@@ -7,7 +7,7 @@ output: html_document
 ## Agenda for today:
 
 1) Figure out what the next steps are in the project sequence
-2) 
+2) Ask any revelant to the next steps (i.e. for the draft manuscript)
 
 ## Team Meeting Notes (Date: 10/28/2025):
 - Refine aims (make it more specific)
