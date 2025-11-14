@@ -1,0 +1,17 @@
+---
+title: "Day 6 Notes (Optional Meeting)"
+author: "Jessica Wang"
+date: "2025-11-14"
+output: html_document
+---
+
+## Agenda for today:
+
+1) Request feedback on our proposal (i.e. areas we could improve upon)
+2) Ask any other questions for the week
+
+## Team Meeting Notes (Date: 10/28/2025):
+-
+
+## To-Do List:
+-
