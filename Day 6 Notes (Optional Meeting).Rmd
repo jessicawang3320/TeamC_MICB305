@@ -11,7 +11,21 @@ output: html_document
 2) Ask any other questions for the week
 
 ## Team Meeting Notes (Date: 10/28/2025):
--
+- title: examining microbial diversity and composition changes in relation to humoral.../as biomarkers for humoral response
+- backup all of the claims that are made in the intro
+- try to change the approach of the paper (find papers that back up the rationale)
+- look at microbiome after vaccination (unless you can find literature that can back up claims)
+- aim 1: microbial diversity/richness --> composition (indicate specific analysis for this section)
+- we will always be looking at IgA/IgG for each aim
+- split alpha and beta diversity
+- when looking at alpha diversity, consider which analysis to use because each method considers different factors (i.e. unifrac...)
+- cite papers that show that microbial compositions are different 
+- intro must be set up so that it backs up what our aims are going to be
+- maybe mention that we merged all days for analysis 
+- aim 2: in addition to the beta diversity we can also run a relative abundance analysis (if there is a difference in beta diversity then we can further find out what are the differences) --> still can run additional analyses if there is no significance found in the beta diversity
+- remove control participants for downstream analysis (keep the vaccinated ones only)
+- aim 2: focus on one group (do not compare between vaccinated vs unvaccinated)
+
 
 ## To-Do List:
 -
