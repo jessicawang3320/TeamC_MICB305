@@ -1,0 +1,18 @@
+---
+title: "Day 7 Notes"
+author: "Jessica Wang"
+date: "2025-11-18"
+output: html_document
+---
+## Agenda for today:
+
+1) Review any relevant figures that have been produced so far
+2) Ask any questions related to downstream analysis to be clear if we are on the right track 
+3) Establish figures that have significance and those that do not
+
+## Team Meeting Notes (Date: 10/28/2025):
+- 
+
+
+## To-Do List:
+-
