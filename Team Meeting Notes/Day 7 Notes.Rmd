@@ -10,7 +10,7 @@ output: html_document
 2) Ask any questions related to downstream analysis to be clear if we are on the right track 
 3) Establish figures that have significance and those that do not
 
-## Team Meeting Notes (Date: 10/28/2025):
+## Team Meeting Notes (Date: 11/18/2025):
 - aims are clear (approved) so far and should be good to go
 - non responders will be the control group now 
 - when running ancombc we should be able to run it one go (set non responder group as control as it will make the analysis less messy)
