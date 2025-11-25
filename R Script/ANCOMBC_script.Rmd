@@ -1,0 +1,78 @@
+---
+title: "ancombc"
+author: "ellie"
+date: "2025-11-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+dose 1 ancom
+```{r}
+#packages
+library(ggplot2)
+library(tidyverse)
+library(ANCOMBC)
+library(phyloseq)
+
+set.seed(1)
+
+#ancom dose 1
+out <- ancombc2(ps_dose1, fix_formula = "Response",
+                p_adj_method = "BH",
+                prv_cut = 0.1)
+
+
+#results from ancom
+results <- out$res
+
+
+#significant differences dose 1 (relative to nonresponders)
+diff_taxa <- results %>% filter(diff_robust_ResponseNone == T)
+
+#plot of diff
+dose1plot <- diff_taxa %>% ggplot(aes(taxon, lfc_ResponseNone)) + geom_col() +
+  labs(title = "ANCOMBC results for 1-dose participants", subtitle = "(relative to non-response group)")
+
+
+#saving plot
+ggsave("ANCOMBC_dose1.png", plot = dose1plot, 
+       path = "../Results/Figures",
+       width = 4,
+       height = 6,
+       units = "in",
+       dpi = 300
+       
+       )
+
+dose1plot
+
+```
+
+
+
+
+dose 4 ancom
+```{r}
+
+set.seed(1)
+
+#ancom dose 4
+out2 <- ancombc2(ps_dose4, fix_formula = "Response",
+                p_adj_method = "BH",
+                prv_cut = 0.1)
+
+
+#ancom dose 4 results
+dose4results <- out2$res
+
+#ancom dose 4 differences (relative to Nonresponders)
+dose4diff_taxa <- dose4results %>% filter(diff_robust_ResponseNone == T)
+
+## there were no differences found, so I couldn't generate a plot :(
+
+```
