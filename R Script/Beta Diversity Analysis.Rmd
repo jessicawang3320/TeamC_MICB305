@@ -14,11 +14,11 @@ library(ggplot2)
 library(ANCOMBC)
 library(tidyverse)
 
-ps <- readRDS("Datasets/ps_alldoses.rds")
+ps <- readRDS("../Datasets/ps_alldoses.rds")
 
-ps1 <- readRDS("Datasets/ps_dose1.rds")
+ps1 <- readRDS("../Datasets/ps_dose1.rds")
 
-ps2 <- readRDS("Datasets/ps_dose4.rds")
+ps2 <- readRDS("../Datasets/ps_dose4.rds")
 
 ```
 
