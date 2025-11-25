@@ -71,8 +71,19 @@ out2 <- ancombc2(ps_dose4, fix_formula = "Response",
 dose4results <- out2$res
 
 #ancom dose 4 differences (relative to Nonresponders)
-dose4diff_taxa <- dose4results %>% filter(diff_robust_ResponseNone == T)
+dose4diff_taxa_NRC <- dose4results %>% filter(diff_robust_ResponseNone == T)
+#NRC above refers to Non-responder comparison
 
-## there were no differences found, so I couldn't generate a plot :(
+dose4diff_taxa_ARC <- dose4results %>% filter(diff_robust_ResponseIgA == T)
+#ARC above refers to IgA responder
+
+dose4diff_taxa_GRC <- dose4results %>% filter(diff_robust_ResponseIgG == T)
+#ARC above refers to IgG responder
+
+dose4diff_taxa_BRC <- dose4results %>% filter(`diff_robust_(Intercept)` == T)
+#BRC above refers to Both(IgA and IgG) responder
+
+## there were no differences found through any comparison,
+#   so I couldn't generate a plot :(
 
 ```
