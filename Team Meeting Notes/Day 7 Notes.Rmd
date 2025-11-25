@@ -11,8 +11,17 @@ output: html_document
 3) Establish figures that have significance and those that do not
 
 ## Team Meeting Notes (Date: 10/28/2025):
-- 
+- aims are clear (approved) so far and should be good to go
+- non responders will be the control group now 
+- when running ancombc we should be able to run it one go (set non responder group as control as it will make the analysis less messy)
+- for aim 3: we will remove the control groups
+- first identify significance between groups then
+- work has been divided!! (ellie: alpha/beta, jessica: picrust, amy: ancombc)
+- save phyloseq object as a R object (for easier downstream analysis)
+- separated phyloseq object in dose 1 and dose 4 objects
+- we are controlling for doses at this point (confounding variable)
 
 
 ## To-Do List:
--
+- have figures ready for next meeting (put into powerpoint if possible)
+- maybe have ppt ready for review? 
