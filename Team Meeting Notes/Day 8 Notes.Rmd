@@ -1,0 +1,20 @@
+---
+title: "Day 8 Notes"
+author: "Jessica Wang"
+date: "2025-11-25"
+output: html_document
+---
+## Agenda for today:
+
+1) Review figures and results of statistical analysis: alpha -> beta -> permanova -> anombc 
+2) Establish the significant groups that will be used for downstream analysis (i.e. functional analysis)
+3) Review layout of presentation slides
+4) Ask any other questions 
+
+## Team Meeting Notes (Date: 11/25/2025):
+
+
+
+## To-Do List:
+- have figures ready for next meeting (put into powerpoint if possible)
+- maybe have ppt ready for review? 
