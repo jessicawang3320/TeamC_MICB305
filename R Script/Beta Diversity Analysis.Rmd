@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ## Load Libraries
-```{r}
+```{r Loading Libraries }
 library(phyloseq)
 library(vegan)
 library(dplyr)
@@ -23,7 +23,7 @@ ps2 <- readRDS("Datasets/ps_dose4.rds")
 ```
 
 ## Compute Weighted Unifrac for 1-dose
-```{r}
+```{r Computation for Weighted Unifrac 1 dose}
 set.seed(123)
 wu_dist <- distance(ps1, method = "unifrac", weighted = TRUE)
 
@@ -40,8 +40,9 @@ p1_nmds <- plot_ordination(ps1, ord_nmds, color = "Response",
 
 p1_nmds
 ```
+
 ## Compute Weighted Unifrac for 4-dose
-```{r}
+```{r Computation of Weighted Unifrac for 4 dose}
 set.seed(123)
 wu_dist2 <- distance(ps2, method = "unifrac", weighted = TRUE)
 
@@ -58,6 +59,7 @@ p2_nmds <- plot_ordination(ps2, ord_nmds2, color = "Response",
 
 p2_nmds
 ```
+
 ## Compute Bray Curtis for 1-dose
 ```{r}
 bray1 <- distance(ps1, method = "bray")
@@ -65,12 +67,14 @@ ord_bray1 <- ordinate(ps1, "NMDS", distance = bray1)
 plot_ordination(ps1, ord_bray1, color = "Response")
 
 ```
+
 ## Compute Bray Curtis for 4-dose
 ```{r}
 bray2 <- distance(ps2, method = "bray")
 ord_bray2 <- ordinate(ps2, "NMDS", distance = bray2)
 plot_ordination(ps2, ord_bray2, color = "Response")
 ```
+
 ## Perform pairwise PERMANOVA on weighted unifrac (for both 1 and 4 dose)
 ```{r PERMANOVA}
 unifrac_weighted <- distance(ps, method = "unifrac", weighted = TRUE)
@@ -100,5 +104,20 @@ for (resp in levels(meta$Response)) {
 
 pairwise_perm
 
+```
+
+
+## Taxa Bar Plot 
+```{r}
+ps_rel <- transform_sample_counts(ps, function(x) x / sum(x))
+
+plot_bar(ps_rel, x = "Response", fill = "Phylum") +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ Vaccination.Status) +
+  theme_classic() +
+  labs(
+    x = "Humoral response category",
+    y = "Relative abundance"
+  )
 ```
 
