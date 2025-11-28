@@ -1,17 +1,11 @@
 library(tidyverse)
 library(phyloseq)
-library(vegan)
 library(ggpubr)
-library(microbiome)
-library(indicspecies)
-library(writexl)
-library(ANCOMBC)
-setwd("C:/Users/amyfa/mouse_tutorial/MICB 305 R projects/Ty21a_diversity_analysis")
 
 #Load data
 metadata = read.delim('metadata_finalized.tsv')
 taxonomy <- read.delim('taxonomy.tsv', row.names = 1)
-counts <- read.delim('feature-table.txt', skip=1, row.names=1)
+counts <- read.delim('feature-table1.txt', skip=1, row.names=1)
 tree <- read_tree('tree.nwk')
 
 #Create phyloseq object
@@ -52,6 +46,7 @@ saveRDS(ps, file = "ps_alldoses.rds")
 
 #Save each in .r data, phyloseq object into R scripts, one for 1-dose, one for 4-dose, use save function
 #Loading the same phyloseq but keep each analysis into separate files
+
 
 
 
