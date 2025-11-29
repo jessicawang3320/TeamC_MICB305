@@ -12,9 +12,12 @@ output: html_document
 4) Ask any other questions 
 
 ## Team Meeting Notes (Date: 11/25/2025):
-
+- Rerun unifrac, ancomb, faithPD
+- Keep presentation slides with minimal words 
+- 1 dose, Both, shift in micrbiome 
 
 
 ## To-Do List:
-- have figures ready for next meeting (put into powerpoint if possible)
-- maybe have ppt ready for review? 
+- Troubleshoot error: phyloseq obj (retrain classifier)
+- Bray Curtis (generate elipse to highlight significant clusters)
+- email Avril about picrust (ASAP)

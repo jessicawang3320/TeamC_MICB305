@@ -14,11 +14,11 @@ library(ggplot2)
 library(ANCOMBC)
 library(tidyverse)
 
-ps <- readRDS("Datasets/ps_alldoses.rds")
+ps <- readRDS("../Datasets/Phyloseq Objects/ps_alldoses.rds")
 
-ps1 <- readRDS("Datasets/ps_dose1.rds")
+ps1 <- readRDS("../Datasets/Phyloseq Objects/ps_dose1.rds")
 
-ps2 <- readRDS("Datasets/ps_dose4.rds")
+ps2 <- readRDS("../Datasets/Phyloseq Objects/ps_dose4.rds")
 
 ```
 
@@ -64,7 +64,14 @@ p2_nmds
 ```{r}
 bray1 <- distance(ps1, method = "bray")
 ord_bray1 <- ordinate(ps1, "NMDS", distance = bray1)
-plot_ordination(ps1, ord_bray1, color = "Response")
+p_bray1 <- plot_ordination(ps1, ord_bray1, color = "Response") +
+  stat_ellipse(aes(group = Response),
+               type = "t",      
+               linetype = 2) +  
+  theme_bw()
+
+p_bray1
+
 
 ```
 
@@ -72,7 +79,13 @@ plot_ordination(ps1, ord_bray1, color = "Response")
 ```{r}
 bray2 <- distance(ps2, method = "bray")
 ord_bray2 <- ordinate(ps2, "NMDS", distance = bray2)
-plot_ordination(ps2, ord_bray2, color = "Response")
+p_bray2 <- plot_ordination(ps2, ord_bray2, color = "Response") +
+  stat_ellipse(aes(group = Response),
+               type = "t",      
+               linetype = 2) +  
+  theme_bw()
+
+p_bray2
 ```
 
 ## Perform pairwise PERMANOVA on weighted unifrac (for both 1 and 4 dose)
