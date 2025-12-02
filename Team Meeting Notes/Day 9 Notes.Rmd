@@ -9,6 +9,7 @@ output: html_document
 1) Review presentation slides 
 2) Ensure that all relevant figures/tables are in the slides
 3) Check to see that the figures generated are correct and with the proper aesthetics
+4) Go over taxa bar plot to see what went wrong?
 
 ## Team Meeting Notes (Date: 11/25/2025):
 
