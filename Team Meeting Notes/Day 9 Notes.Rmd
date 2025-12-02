@@ -1,0 +1,17 @@
+---
+title: "Day 9 Notes"
+author: "Jessica Wang"
+date: "2025-12-02"
+output: html_document
+---
+## Agenda for today:
+
+1) Review presentation slides 
+2) Ensure that all relevant figures/tables are in the slides
+3) Check to see that the figures generated are correct and with the proper aesthetics
+
+## Team Meeting Notes (Date: 11/25/2025):
+
+
+
+## To-Do List:
