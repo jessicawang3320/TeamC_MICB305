@@ -1,0 +1,74 @@
+---
+title: "PCoA Plot"
+author: "Jessica Wang"
+date: "2025-12-02"
+output: html_document
+---
+```{r Load libraries for analysis}
+library(tidyverse)      
+library(phyloseq)       
+library(vegan)          
+library(ggplot2)        
+library(readr)          
+```
+
+```{r Load MetaCyc Pathway}
+
+path <- read_tsv("../Datasets/picrust/teamC_out_unzipped/teamC_out/pathways_out/path_abun_unstrat.tsv.gz")
+
+# Renaming first column to a clean name
+path <- path %>%
+  rename(pathway = 1)
+
+# Convert to matrix
+path_mat <- path %>%
+  column_to_rownames("pathway") %>%
+  t()
+
+```
+```{r Compute Bray-Curtis Distance}
+
+bray <- vegdist(path_mat, method = "bray")
+
+```
+
+```{r Running PCoA}
+
+pcoa_res <- cmdscale(bray, eig = TRUE, k = 2)
+
+```
+
+```{r Adding Metadata}
+meta <- read_csv("../Datasets/clean_data/Tidy/metadata_finalized2.csv")
+
+meta <- read_csv("../Datasets/clean_data/Tidy/metadata_finalized2.csv",
+                 show_col_types = FALSE) %>%
+  select(-...1) %>%                           # drop index column
+  mutate(run_clean = sub("\\.fastq\\.gz$", "", Run))
+
+pcoa_df <- as_tibble(pcoa_res$points, rownames = "sample_name") %>%
+  rename(PCoA1 = V1, PCoA2 = V2) %>%
+  mutate(run_clean = sub("\\.fastq\\.gz$", "", sample_name)) %>% 
+  left_join(meta, by = "run_clean")
+```
+```{r Plotting PCoA}
+
+ggplot(pcoa_df, aes(x = PCoA1, y = PCoA2, color = Vaccination.Status)) +
+  geom_point(size = 3) +
+  stat_ellipse() +
+  theme_classic()
+
+pcoa_dose1 <- pcoa_df %>%
+  filter(Vaccination.Status == "1-dose", !is.na(Response))
+
+pcoa_dose1plot <- ggplot(pcoa_dose1, aes(x = PCoA1, y = PCoA2, color = Response)) +
+  geom_point(size = 3) +
+  stat_ellipse() +
+  theme_classic() +
+  labs(
+    title = "PCoA of MetaCyc Pathways (1-dose only)",
+    subtitle = "Both responders vs Non-responders",
+    color = "Responder group"
+  )
+```
+
