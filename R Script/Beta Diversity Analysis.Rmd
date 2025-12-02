@@ -119,12 +119,92 @@ pairwise_perm
 
 ```
 
+## Perform pairwise PERMANOVA on weighted unifrac(1-dose)
+```{r PERMANOVA for dose 1}
+
+unifrac_weighted_d1 <- distance(ps1, method = "unifrac", weighted = TRUE)
+
+meta_d1 <- as.data.frame(as(sample_data(ps1), "data.frame"))
+meta_d1$Response <- factor(meta_d1$Response)
+
+
+all(rownames(meta_d1) == rownames(as.matrix(unifrac_weighted_d1)))
+
+
+dist_mat1 <- as.matrix(unifrac_weighted_d1)
+
+
+lvls1 <- levels(meta_d1$Response)
+combs1 <- combn(lvls1, 2, simplify = FALSE)
+
+pw_results1 <- lapply(combs1, function(pair) {
+  sub_meta1 <- meta_d1[meta_d1$Response %in% pair, , drop = FALSE]
+  sub_dist1 <- as.dist(dist_mat[rownames(sub_meta1), rownames(sub_meta1)])
+  perm1 <- adonis2(sub_dist1 ~ Response,
+                  data = sub_meta1,
+                  permutations = 999)
+  
+  data.frame(
+    Group1  = pair[1],
+    Group2  = pair[2],
+    R2      = perm1$R2[1],
+    F_value = perm1$F[1],
+    p_value = perm1$`Pr(>F)`[1]
+  )
+})
+
+pw_results1 <- bind_rows(pw_results1)
+
+pw_results1$p_adj <- p.adjust(pw_results1$p_value, method = "BH")
+
+pw_results1
+```
+## Perform pairwise PERMANOVA on weighted unifrac (4-dose)
+```{r PERMANOVA for 4 dose}
+
+unifrac_weighted_d2 <- distance(ps2, method = "unifrac", weighted = TRUE)
+
+meta_d2 <- as.data.frame(as(sample_data(ps2), "data.frame"))
+meta_d2$Response <- factor(meta_d2$Response)
+
+
+all(rownames(meta_d2) == rownames(as.matrix(unifrac_weighted_d2)))
+
+
+dist_mat2 <- as.matrix(unifrac_weighted_d2)
+
+
+lvls2 <- levels(meta_d2$Response)
+combs2 <- combn(lvls2, 2, simplify = FALSE)
+
+pw_results2 <- lapply(combs2, function(pair) {
+  sub_meta2 <- meta_d2[meta_d2$Response %in% pair, , drop = FALSE]
+  sub_dist2 <- as.dist(dist_mat[rownames(sub_meta2), rownames(sub_meta2)])
+  perm2 <- adonis2(sub_dist2 ~ Response,
+                  data = sub_meta2,
+                  permutations = 999)
+  
+  data.frame(
+    Group1  = pair[1],
+    Group2  = pair[2],
+    R2      = perm2$R2[1],
+    F_value = perm2$F[1],
+    p_value = perm2$`Pr(>F)`[1]
+  )
+})
+
+pw_results2 <- bind_rows(pw_results2)
+
+pw_results2$p_adj <- p.adjust(pw_results2$p_value, method = "BH")
+
+pw_results2
+```
 
 ## Taxa Bar Plot 
 ```{r}
 ps_rel <- transform_sample_counts(ps, function(x) x / sum(x))
 
-plot_bar(ps_rel, x = "Response", fill = "Phylum") +
+taxa <- plot_bar(ps_rel, x = "Response", fill = "Genus") +
   geom_bar(stat = "identity") +
   facet_wrap(~ Vaccination.Status) +
   theme_classic() +
@@ -132,5 +212,7 @@ plot_bar(ps_rel, x = "Response", fill = "Phylum") +
     x = "Humoral response category",
     y = "Relative abundance"
   )
+
+taxa
 ```
 
