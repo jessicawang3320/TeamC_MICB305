@@ -70,5 +70,6 @@ pcoa_dose1plot <- ggplot(pcoa_dose1, aes(x = PCoA1, y = PCoA2, color = Response)
     subtitle = "Both responders vs Non-responders",
     color = "Responder group"
   )
+pcoa_dose1plot
 ```
 
