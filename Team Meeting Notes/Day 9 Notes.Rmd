@@ -12,7 +12,8 @@ output: html_document
 4) Go over taxa bar plot to see what went wrong?
 
 ## Team Meeting Notes (Date: 11/25/2025):
-
-
+- All notes have been documented in the ppt slides 
 
 ## To-Do List:
+- Fix slides according to the commments in ppt
+- Come up with a title relating to these keywords: 1/4dose, responder, non-responder, microbial diversity, changes...
