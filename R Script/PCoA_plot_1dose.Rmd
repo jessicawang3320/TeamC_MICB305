@@ -1,5 +1,5 @@
 ---
-title: "PCoA Plot"
+title: "PCoA Plot Dose 1"
 author: "Jessica Wang"
 date: "2025-12-02"
 output: html_document
@@ -71,5 +71,25 @@ pcoa_dose1plot <- ggplot(pcoa_dose1, aes(x = PCoA1, y = PCoA2, color = Response)
     color = "Responder group"
   )
 pcoa_dose1plot
+```
+```{r Performing PERMANOVA for PCoA dose 1}
+
+pcoa_dose1 <- pcoa_df %>%
+  filter(Vaccination.Status == "1-dose", !is.na(Response))
+
+samples_dose1 <- pcoa_dose1$sample_name
+
+path_mat_dose1 <- path_mat[samples_dose1, ]
+
+set.seed(421)  # for reproducibility
+
+perm_res <- adonis2(
+  path_mat_dose1 ~ Response,
+  data  = pcoa_dose1,
+  method = "bray",
+  permutations = 999
+)
+
+perm_res
 ```
 
