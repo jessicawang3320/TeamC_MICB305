@@ -139,7 +139,7 @@ combs1 <- combn(lvls1, 2, simplify = FALSE)
 
 pw_results1 <- lapply(combs1, function(pair) {
   sub_meta1 <- meta_d1[meta_d1$Response %in% pair, , drop = FALSE]
-  sub_dist1 <- as.dist(dist_mat[rownames(sub_meta1), rownames(sub_meta1)])
+  sub_dist1 <- as.dist(dist_mat1[rownames(sub_meta1), rownames(sub_meta1)])
   perm1 <- adonis2(sub_dist1 ~ Response,
                   data = sub_meta1,
                   permutations = 999)
@@ -169,7 +169,7 @@ meta_d2$Response <- factor(meta_d2$Response)
 
 
 all(rownames(meta_d2) == rownames(as.matrix(unifrac_weighted_d2)))
-
+`
 
 dist_mat2 <- as.matrix(unifrac_weighted_d2)
 
@@ -179,7 +179,7 @@ combs2 <- combn(lvls2, 2, simplify = FALSE)
 
 pw_results2 <- lapply(combs2, function(pair) {
   sub_meta2 <- meta_d2[meta_d2$Response %in% pair, , drop = FALSE]
-  sub_dist2 <- as.dist(dist_mat[rownames(sub_meta2), rownames(sub_meta2)])
+  sub_dist2 <- as.dist(dist_mat2[rownames(sub_meta2), rownames(sub_meta2)])
   perm2 <- adonis2(sub_dist2 ~ Response,
                   data = sub_meta2,
                   permutations = 999)
@@ -204,7 +204,7 @@ pw_results2
 ```{r}
 ps_rel <- transform_sample_counts(ps, function(x) x / sum(x))
 
-taxa <- plot_bar(ps_rel, x = "Response", fill = "Genus") +
+taxa <- plot_bar(ps_rel, x = "Response", fill = "Family") +
   geom_bar(stat = "identity") +
   facet_wrap(~ Vaccination.Status) +
   theme_classic() +
